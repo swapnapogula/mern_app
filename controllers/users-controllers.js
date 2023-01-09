@@ -62,7 +62,7 @@ const signup = async (req, res, next) => {
   const createdUser = new User({
     name,
     email,
-    image: request.file.path.replace("\\", "/"),
+    image:req.file.path,
     password: hashedPassword,
     places: []
   });
